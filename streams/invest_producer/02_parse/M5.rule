@@ -1,0 +1,6 @@
+M5  HEADER  type002  ^.*(Maturities).*$
+M5  HEADER  type003  ^.*(Par Value).*$
+M5  HEADER  type004  ^\W+(Security Group)\W+(.*)\W(\(\w{2,5}\))\W+(Security Type)\W+(.*)\W(\(\w{2,5}\))
+M5  DATA  type001  ^\W?(\w{3}\/\d{2})\W+(.{13}\.\d{2})\W+(.{13}\.\d{2})\W+(.{13}\.\d{2})\W+(.{13}\.\d{2})
+M5  DATA  type002  ^\W?(\w{3}\/\d{2})\W+(.{,13}\.\d{2})\W+(.{,13}\.\d{2})\W+$
+M5  HEADER  type005 ^.*(Totals).*$

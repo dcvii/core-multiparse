@@ -1,0 +1,11 @@
+---
+:label: R1
+:rule_count: 1
+:rules:
+- :template: R1
+  :line_category: DATA
+  :line_type: type000
+  :regex: !ruby/regexp '/^(\w{2,4})\W+(\w{,4})\W+(\w{9})/'
+  :label:
+  :freq: 333
+  :key: R1_D_type000

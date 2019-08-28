@@ -1,0 +1,2 @@
+C1  DATA  type000  ^\W?(.{2,26})\t(\w{9})\t
+C1  HEADER  type001  ^\W?(Account)\t(.*)$

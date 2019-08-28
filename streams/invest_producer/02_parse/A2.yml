@@ -1,0 +1,53 @@
+---
+:label: A2
+:rule_count: 7
+:rules:
+- :template: A2
+  :line_category: DATA
+  :line_type: type006
+  :regex: !ruby/regexp '/^\W?(\d{6})(.*)(Prin)\W+(\d{2}\/\d{2}\/\d{2})(.*)(FHLB|WF)/'
+  :label:
+  :freq: 2
+  :key: A2_D_type006
+- :template: A2
+  :line_category: DATA
+  :line_type: type005
+  :regex: !ruby/regexp '/^\W?(\w{9})(.*)(Intp)\W+(\d{2}\/\d{2}\/\d{2})/'
+  :label:
+  :freq: 2
+  :key: A2_D_type005
+- :template: A2
+  :line_category: HEADER
+  :line_type: type001
+  :regex: !ruby/regexp '/Group:.*(\(\w{2,4}\)).*Type:.*(\(\w{2,4}\))/'
+  :label:
+  :freq: 2
+  :key: A2_H_type001
+- :template: A2
+  :line_category: DATA
+  :line_type: type008
+  :regex: !ruby/regexp '/^\W+()(\d{10})\W+(Prin)/'
+  :label:
+  :freq: 0
+  :key: A2_D_type008
+- :template: A2
+  :line_category: DATA
+  :line_type: type007
+  :regex: !ruby/regexp '/^\W+()(\d{10})\W+(Intp)/'
+  :label:
+  :freq: 0
+  :key: A2_D_type007
+- :template: A2
+  :line_category: DATA
+  :line_type: type004
+  :regex: !ruby/regexp '/^\W+(\d{6})\W+(\d{1,2}.\d{3,5})\W+(.*)(WF)\W?$/'
+  :label:
+  :freq: 0
+  :key: A2_D_type004
+- :template: A2
+  :line_category: DATA
+  :line_type: type003
+  :regex: !ruby/regexp '/^\W?(\w{9})(.*)(\d{10})\W+(Intp|Prin)\W+(\d{2}\/\d{2}\/\d{2})\W+(\d{2}\/\d{2}\/\d{2})\W+(\-?\d{,3}?,?\d{,3}?,?\d{,3}\.\d{2})\W+(\-?\d{,3}?,?\d{,3}?,?\d{,3}\.\d{2})\W+(\-?\d{,3}?,?\d{,3}?,?\d{,3}\.\d{2})\W+(WF)\W?$/'
+  :label:
+  :freq: 0
+  :key: A2_D_type003

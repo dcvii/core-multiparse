@@ -1,0 +1,32 @@
+---
+:label: M2
+:rule_count: 4
+:rules:
+- :template: M2
+  :line_category: HEADER
+  :line_type: type001
+  :regex: !ruby/regexp '/^\W?(Date:)(.*)(Report#: M030)\W?$/'
+  :label:
+  :freq: 3
+  :key: M2_H_type001
+- :template: M2
+  :line_category: HEADER
+  :line_type: type003
+  :regex: !ruby/regexp '/(-->>>)\W+(.*)\W+(<<<--)/'
+  :label:
+  :freq: 2
+  :key: M2_H_type003
+- :template: M2
+  :line_category: DATA
+  :line_type: type004
+  :regex: !ruby/regexp '/^\W?(\w{3}\/\d{2})\W+Z\W+(\w{9})/'
+  :label:
+  :freq: 0
+  :key: M2_D_type004
+- :template: M2
+  :line_category: HEADER
+  :line_type: type002
+  :regex: !ruby/regexp '/^\W+(Security Group)\W+(.*)\W(\(\w{2,5}\))\W+(Security Type)\W+(.*)\W(\(\w{2,5}\))/'
+  :label:
+  :freq: 0
+  :key: M2_H_type002

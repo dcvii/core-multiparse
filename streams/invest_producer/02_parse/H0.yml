@@ -1,0 +1,53 @@
+---
+:label: H0
+:rule_count: 7
+:rules:
+- :template: H0
+  :line_category: DATA
+  :line_type: type000
+  :regex: !ruby/regexp '/^(.\S{9})\s*(\d{1,}.\d{4,8})\s*(\d{2}\/\d{2}\/\d{4})\s*(\d{2}\/\d{2}\/\d{2,4})\s*(\d{2}\/\d{2}\/\d{2,4})\s*(\-?\d{1,}.\d{2})/'
+  :label:
+  :freq: 36
+  :key: H0_D_type000
+- :template: H0
+  :line_category: DATA
+  :line_type: type006
+  :regex: !ruby/regexp '/^\s*(\-?\d{1,}.\d{2})\s*(\-?\d{1,}.\d{2})\s*(\-?\d{1,}.\d{2})\s*(\-?\d{1,}.\d{2})/'
+  :label:
+  :freq: 21
+  :key: H0_D_type006
+- :template: H0
+  :line_category: DATA
+  :line_type: type005
+  :regex: !ruby/regexp '/^(Total Security)\s*(Group|Type)\s*(\(\S{1,5}\)):\s*(\-?\d{1,}.\d{2})\s*(\-?\d{1,}.\d{2})/'
+  :label:
+  :freq: 20
+  :key: H0_D_type005
+- :template: H0
+  :line_category: DATA
+  :line_type: type004
+  :regex: !ruby/regexp '/^(\d{10})\s(GNMA.*)\s(\d{2}\/\d{2}\/\d{2})\s*(SELL|BUY)\s*(\-?\d{1,}.\d{2})\s*(\-?\d{1,}.\d{2})\s*(\-?\d{1,}.\d{2})\s*(\-?\d{1,}.\d{2})/'
+  :label:
+  :freq: 16
+  :key: H0_D_type004
+- :template: H0
+  :line_category: DATA
+  :line_type: type001
+  :regex: !ruby/regexp '/^(\d{10})\s(FNMA.*)\s(\d{2}\/\d{2}\/\d{2})\s*(SELL|BUY)\s*(\-?\d{1,}.\d{2})\s*(\-?\d{1,}.\d{2})\s*(\-?\d{1,}.\d{2})\s*(\-?\d{1,}.\d{2})/'
+  :label:
+  :freq: 12
+  :key: H0_D_type001
+- :template: H0
+  :line_category: DATA
+  :line_type: type003
+  :regex: !ruby/regexp '/^(\d{10})\s(FHLMC.*)\s(\d{2}\/\d{2}\/\d{2})\s*(SELL|BUY)\s*(\-?\d{1,}.\d{2})\s*(\-?\d{1,}.\d{2})\s*(\-?\d{1,}.\d{2})\s*(\-?\d{1,}.\d{2})/'
+  :label:
+  :freq: 4
+  :key: H0_D_type003
+- :template: H0
+  :line_category: DATA
+  :line_type: type002
+  :regex: !ruby/regexp '/^(\d{10})\s(SBA.*)\s(\d{2}\/\d{2}\/\d{2})\s*(SELL|BUY)\s*(\-?\d{1,}.\d{2})\s*(\-?\d{1,}.\d{2})\s*(\-?\d{1,}.\d{2})\s*(\-?\d{1,}.\d{2})/'
+  :label:
+  :freq: 2
+  :key: H0_D_type002

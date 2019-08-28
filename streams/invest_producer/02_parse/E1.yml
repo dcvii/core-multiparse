@@ -1,0 +1,18 @@
+---
+:label: E1
+:rule_count: 2
+:rules:
+- :template: E1
+  :line_category: DATA
+  :line_type: type000
+  :regex: !ruby/regexp '/^\W?(\w{,9})\W+(\d{,2}\.\d{,2})(\W?)/'
+  :label:
+  :freq: 197
+  :key: E1_D_type000
+- :template: E1
+  :line_category: HEADER
+  :line_type: type001
+  :regex: !ruby/regexp '/(CUSIP)/'
+  :label:
+  :freq: 1
+  :key: E1_H_type001

@@ -1,0 +1,4 @@
+M2  HEADER  type001  ^\W?(Date:)(.*)(Report#: M030)\W?$
+M2  HEADER  type002  ^\W+(Security Group)\W+(.*)\W(\(\w{2,5}\))\W+(Security Type)\W+(.*)\W(\(\w{2,5}\))
+M2  HEADER  type003  (-->>>)\W+(.*)\W+(<<<--)
+M2  DATA  type004  ^\W?(\w{3}\/\d{2})\W+Z\W+(\w{9})

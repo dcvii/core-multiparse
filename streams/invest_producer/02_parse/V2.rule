@@ -1,0 +1,3 @@
+V2  DATA  type001  ^\W?(\w{9})\W+(\d{10})
+V2  HEADER  type001  ^Date:\s*(.*)
+V2  HEADER  type002  ^.*Time:\s*(\d{1,2}:\d{1,2})(.*)

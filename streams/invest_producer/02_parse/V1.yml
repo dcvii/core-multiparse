@@ -1,0 +1,39 @@
+---
+:label: V1
+:rule_count: 5
+:rules:
+- :template: V1
+  :line_category: DATA
+  :line_type: type001
+  :regex: !ruby/regexp '/^\W?(\"S\")/'
+  :label:
+  :freq: 206
+  :key: V1_D_type001
+- :template: V1
+  :line_category: HEADER
+  :line_type: type001
+  :regex: !ruby/regexp '/(OriginalCost)/'
+  :label:
+  :freq: 1
+  :key: V1_H_type001
+- :template: V1
+  :line_category: DATA
+  :line_type: type004
+  :regex: !ruby/regexp '/^\W+(\w{2,5})(\W{3,})(\w{2,5})\W+(\-?\d{1,}.\d{2})\W+(\-?\d{1,}.\d{2})\W+(\-?\d{1,}.\d{2})\W+(\-?\d{1,}.\d{2})\W+(\-?\d{1,}.\d{2})\W+(\-?\d{1,}.\d{2})\W+(\-?\d{1,}.\d{2})\W+(\-?\d{1,}.\d{2})/'
+  :label:
+  :freq: 0
+  :key: V1_D_type004
+- :template: V1
+  :line_category: DATA
+  :line_type: type003
+  :regex: !ruby/regexp '/^\W+(Sec-Group)\W+(\w{2,5})\W+(\-?\d{1,}.\d{2})\W+(\-?\d{1,}.\d{2})\W+(\-?\d{1,}.\d{2})\W+(\-?\d{1,}.\d{2})\W+(\-?\d{1,}.\d{2})\W+(\-?\d{1,}.\d{2})\W+(\-?\d{1,}.\d{2})\W+(\-?\d{1,}.\d{2})/'
+  :label:
+  :freq: 0
+  :key: V1_D_type003
+- :template: V1
+  :line_category: DATA
+  :line_type: type002
+  :regex: !ruby/regexp '/^\W+(Sec-Type)\W+(\w{2,5})\W+(\-?\d{1,}.\d{2})\W+(\-?\d{1,}.\d{2})\W+(\-?\d{1,}.\d{2})\W+(\-?\d{1,}.\d{2})\W+(\-?\d{1,}.\d{2})\W+(\-?\d{1,}.\d{2})\W+(\-?\d{1,}.\d{2})\W+(\-?\d{1,}.\d{2})/'
+  :label:
+  :freq: 0
+  :key: V1_D_type002

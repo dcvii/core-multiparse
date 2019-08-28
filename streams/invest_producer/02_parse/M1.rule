@@ -1,0 +1,6 @@
+M1  HEADER  type002  ^.*(Maturities).*$
+M1  HEADER  type003  ^.*(Par Value).*$
+M1  HEADER  type004  ^\W+(Security Group)\W+(.*)\W(\(\w{2,5}\))\W+(Security Type)\W+(.*)\W(\(\w{2,5}\))
+M1  DATA  type001  ^\W?(J|F|M|A|S|O|N|D)(\w{2}\/\d{2})\W+(\-?\d{,3}?,?\d{,3}?,?\d{,3}\.\d{2})
+M1  DATA  type002  ^\W?(J|F|M|A|S|O|N|D)(\w{2}\/\d{2})\W+(\-?\d{,3}?,?\d{,3}?,?\d{,3}\.\d{2})(.*)(/d{1,2}.\d{3})
+M1  HEADER  type005 ^.*(Totals).*$

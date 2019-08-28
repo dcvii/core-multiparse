@@ -1,0 +1,18 @@
+---
+:label: C1
+:rule_count: 2
+:rules:
+- :template: C1
+  :line_category: DATA
+  :line_type: type000
+  :regex: !ruby/regexp '/^\W?(.{2,26})\t(\w{9})\t/'
+  :label:
+  :freq: 208
+  :key: C1_D_type000
+- :template: C1
+  :line_category: HEADER
+  :line_type: type001
+  :regex: !ruby/regexp '/^\W?(Account)\t(.*)$/'
+  :label:
+  :freq: 18
+  :key: C1_H_type001

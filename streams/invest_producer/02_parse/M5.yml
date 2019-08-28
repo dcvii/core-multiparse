@@ -1,0 +1,46 @@
+---
+:label: M5
+:rule_count: 6
+:rules:
+- :template: M5
+  :line_category: DATA
+  :line_type: type001
+  :regex: !ruby/regexp '/^\W?(\w{3}\/\d{2})\W+(.{13}\.\d{2})\W+(.{13}\.\d{2})\W+(.{13}\.\d{2})\W+(.{13}\.\d{2})/'
+  :label:
+  :freq: 48
+  :key: M5_D_type001
+- :template: M5
+  :line_category: HEADER
+  :line_type: type005
+  :regex: !ruby/regexp '/^.*(Totals).*$/'
+  :label:
+  :freq: 2
+  :key: M5_H_type005
+- :template: M5
+  :line_category: HEADER
+  :line_type: type003
+  :regex: !ruby/regexp '/^.*(Par Value).*$/'
+  :label:
+  :freq: 2
+  :key: M5_H_type003
+- :template: M5
+  :line_category: DATA
+  :line_type: type002
+  :regex: !ruby/regexp '/^\W?(\w{3}\/\d{2})\W+(.{,13}\.\d{2})\W+(.{,13}\.\d{2})\W+$/'
+  :label:
+  :freq: 1
+  :key: M5_D_type002
+- :template: M5
+  :line_category: HEADER
+  :line_type: type002
+  :regex: !ruby/regexp '/^.*(Maturities).*$/'
+  :label:
+  :freq: 1
+  :key: M5_H_type002
+- :template: M5
+  :line_category: HEADER
+  :line_type: type004
+  :regex: !ruby/regexp '/^\W+(Security Group)\W+(.*)\W(\(\w{2,5}\))\W+(Security Type)\W+(.*)\W(\(\w{2,5}\))/'
+  :label:
+  :freq: 0
+  :key: M5_H_type004

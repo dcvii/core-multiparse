@@ -1,0 +1,480 @@
+---
+:label: V0
+:rule_count: 68
+:rules:
+- :template: V0
+  :line_category: BLANK
+  :line_type: type001
+  :regex: !ruby/regexp '/(^\W+$)/'
+  :label:
+  :freq: 2358
+  :key: V0_B_type001
+- :template: V0
+  :line_category: HEADER
+  :line_type: type015
+  :regex: !ruby/regexp '/^\W+(\d{1,2}(\.)\d{3,5})\W+(\d{2}\/\d{2}\/\d{4})\W+(\d{2}\/\d{2}\/\d{2})/'
+  :label:
+  :freq: 1003
+  :key: V0_H_type015
+- :template: V0
+  :line_category: DATA
+  :line_type: type014
+  :regex: !ruby/regexp '/^\W+(?:\b)(F\w{1,4}|N\w{1,4}|G\w{1,4})/'
+  :label:
+  :freq: 951
+  :key: V0_D_type014
+- :template: V0
+  :line_category: DATA
+  :line_type: type001
+  :regex: !ruby/regexp '/^\W+(\w{9})\W+(\d{10})\W+(\-?\d{1,}.\d{2})\W+(\-?\d{1,}.\d{2})\W+(\-?\d{1,}.\d{2})\W+(\-?\d{1,}.\d{2})\W+(\-?\d{1,}.\d{2})\W+(\-?\d{1,}.\d{2})\W+(\-?\d{1,}.\d{2})\W+(\-?\d{1,}.\d{2})/'
+  :label:
+  :freq: 580
+  :key: V0_D_type001
+- :template: V0
+  :line_category: DATA
+  :line_type: type013
+  :regex: !ruby/regexp '/^\W+(\w{3,4})\W+(\-?\d{1,}.\d{2})/'
+  :label:
+  :freq: 458
+  :key: V0_D_type013
+- :template: V0
+  :line_category: DATA
+  :line_type: type012
+  :regex: !ruby/regexp '/(?:^\W?)(\w{3,})\W+(\w{3,})\W+\W+(\-?\d{1,}.\d{2})/'
+  :label:
+  :freq: 440
+  :key: V0_D_type012
+- :template: V0
+  :line_category: HEADER
+  :line_type: type014
+  :regex: !ruby/regexp '/^\W+(.+)(PAY)(.+)(\/)(.+)(DELAY)/'
+  :label:
+  :freq: 257
+  :key: V0_H_type014
+- :template: V0
+  :line_category: HEADER
+  :line_type: type025
+  :regex: !ruby/regexp '/(CALL).+(BEG)/'
+  :label:
+  :freq: 240
+  :key: V0_H_type025
+- :template: V0
+  :line_category: HEADER
+  :line_type: type026
+  :regex: !ruby/regexp '/(Continuous Call).+(\d{2}\/\d{2}\/\d{4})/'
+  :label:
+  :freq: 232
+  :key: V0_H_type026
+- :template: V0
+  :line_category: HEADER
+  :line_type: type003
+  :regex: !ruby/regexp '/^.*User(.*)Page/'
+  :label:
+  :freq: 139
+  :key: V0_H_type003
+- :template: V0
+  :line_category: HEADER
+  :line_type: type004
+  :regex: !ruby/regexp '/^.*Institution: H26\s*\((Heritage Oaks)(.*)/'
+  :label:
+  :freq: 137
+  :key: V0_H_type004
+- :template: V0
+  :line_category: DATA
+  :line_type: type006
+  :regex: !ruby/regexp '/^(\W{3,})(\-?\d{1,}.\d{2})\W+(\-?\d{1,}.\d{2})\W+(\-?\d{1,}.\d{2})\W+(\-?\d{1,}.\d{2})\W+(\-?\d{1,}.\d{2})\W+(\-?\d{1,}.\d{2})\W+(\-?\d{1,}.\d{2})\W+(\-?\d{1,}.\d{2})/'
+  :label:
+  :freq: 133
+  :key: V0_D_type006
+- :template: V0
+  :line_category: HEADER
+  :line_type: type013
+  :regex: !ruby/regexp '/^\W+(EXCH|FLT|SEQ|PAC|DLY|PT)(.*)(\/)/'
+  :label:
+  :freq: 120
+  :key: V0_H_type013
+- :template: V0
+  :line_category: DATA
+  :line_type: type015
+  :regex: !ruby/regexp '/^\W?(\w{9}).+(\d{10}).+(\d{2}\/\d{2}\/\d{2}).+(\d{2}\/\d{2}\/\d{2}).+$/'
+  :label:
+  :freq: 113
+  :key: V0_D_type015
+- :template: V0
+  :line_category: HEADER
+  :line_type: type016
+  :regex: !ruby/regexp "/^\\W+(Totals: Security Type)\\W+(\\(\\w{2,5}\\))﻿ ﻿/"
+  :label:
+  :freq: 85
+  :key: V0_H_type016
+- :template: V0
+  :line_category: HEADER
+  :line_type: type007
+  :regex: !ruby/regexp '/^\W+(Security Group)\W+(.*)\W(\(\w{2,5}\))\W+(Security Type)\W+(.*)\W(\(\w{2,5}\))/'
+  :label:
+  :freq: 83
+  :key: V0_H_type007
+- :template: V0
+  :line_category: DATA
+  :line_type: type002
+  :regex: !ruby/regexp '/^\W+(Sec-Type)\W+(\w{2,5})\W+(\-?\d{1,}.\d{2})\W+(\-?\d{1,}.\d{2})\W+(\-?\d{1,}.\d{2})\W+(\-?\d{1,}.\d{2})\W+(\-?\d{1,}.\d{2})\W+(\-?\d{1,}.\d{2})\W+(\-?\d{1,}.\d{2})\W+(\-?\d{1,}.\d{2})/'
+  :label:
+  :freq: 62
+  :key: V0_D_type002
+- :template: V0
+  :line_category: HEADER
+  :line_type: type017
+  :regex: !ruby/regexp "/^\\W+(Totals: Security Group)\\W+(\\(\\w{2,5}\\))﻿ ﻿/"
+  :label:
+  :freq: 56
+  :key: V0_H_type017
+- :template: V0
+  :line_category: DATA
+  :line_type: type007
+  :regex: !ruby/regexp '/^\W+(\w{2,5})\W+(\w{2,5})\W+(\w{9})\W+(\d{2}\/\d{2}\/\d{2})\W+(\d{10})\W+(\d{2}\/\d{2}\/\d{2}).+(C\/C)/'
+  :label:
+  :freq: 56
+  :key: V0_D_type007
+- :template: V0
+  :line_category: HEADER
+  :line_type: type019
+  :regex: !ruby/regexp '/^\W+.+(LIBOR)/'
+  :label:
+  :freq: 49
+  :key: V0_H_type019
+- :template: V0
+  :line_category: DATA
+  :line_type: type005
+  :regex: !ruby/regexp '/^(\W{3,})(\w{2,5})\W+(\-?\d{1,}.\d{2})\W+(\-?\d{1,}.\d{2})\W+(\-?\d{1,}.\d{2})\W+(\-?\d{1,}.\d{2})\W+(\-?\d{1,}.\d{2})\W+(\-?\d{1,}.\d{2})\W+(\-?\d{1,}.\d{2})\W+(\-?\d{1,}.\d{2})/'
+  :label:
+  :freq: 38
+  :key: V0_D_type005
+- :template: V0
+  :line_category: HEADER
+  :line_type: type029
+  :regex: !ruby/regexp '/^\W+(S\w{2,4}.+Pool)/'
+  :label:
+  :freq: 35
+  :key: V0_H_type029
+- :template: V0
+  :line_category: HEADER
+  :line_type: type028
+  :regex: !ruby/regexp '/^\W+(\w{2,5}).+(\d{4}-\w+).(\w{1,4})/'
+  :label:
+  :freq: 29
+  :key: V0_H_type028
+- :template: V0
+  :line_category: HEADER
+  :line_type: type012
+  :regex: !ruby/regexp '/^\W+(BRHEA|\w{3,}\W+SERIES)/'
+  :label:
+  :freq: 29
+  :key: V0_H_type012
+- :template: V0
+  :line_category: DATA
+  :line_type: type008
+  :regex: !ruby/regexp '/^\W+(G\w{2,5})\W+(\w{2,5})\W+(\w{9})\W+(\d{2}\/\d{2}\/\d{2})\W+(\d{10})\W+(\d{2}\/\d{2}\/\d{2}).+/'
+  :label:
+  :freq: 26
+  :key: V0_D_type008
+- :template: V0
+  :line_category: DATA
+  :line_type: type004
+  :regex: !ruby/regexp '/^\W+(\w{2,5})(\W{3,})(\w{2,5})\W+(\-?\d{1,}.\d{2})\W+(\-?\d{1,}.\d{2})\W+(\-?\d{1,}.\d{2})\W+(\-?\d{1,}.\d{2})\W+(\-?\d{1,}.\d{2})\W+(\-?\d{1,}.\d{2})\W+(\-?\d{1,}.\d{2})\W+(\-?\d{1,}.\d{2})/'
+  :label:
+  :freq: 24
+  :key: V0_D_type004
+- :template: V0
+  :line_category: DATA
+  :line_type: type003
+  :regex: !ruby/regexp '/^\W+(Sec-Group)\W+(\w{2,5})\W+(\-?\d{1,}.\d{2})\W+(\-?\d{1,}.\d{2})\W+(\-?\d{1,}.\d{2})\W+(\-?\d{1,}.\d{2})\W+(\-?\d{1,}.\d{2})\W+(\-?\d{1,}.\d{2})\W+(\-?\d{1,}.\d{2})\W+(\-?\d{1,}.\d{2})/'
+  :label:
+  :freq: 24
+  :key: V0_D_type003
+- :template: V0
+  :line_category: HEADER
+  :line_type: type027
+  :regex: !ruby/regexp '/^\W+(CMBS).+(:)/'
+  :label:
+  :freq: 23
+  :key: V0_H_type027
+- :template: V0
+  :line_category: HEADER
+  :line_type: type011
+  :regex: !ruby/regexp "/^\\W+(Security Description﻿)\\W+(﻿Trans#﻿)/"
+  :label:
+  :freq: 20
+  :key: V0_H_type011
+- :template: V0
+  :line_category: HEADER
+  :line_type: type010
+  :regex: !ruby/regexp "/^\\W+(SGroup)\\W+(Type)\\W+(CUSIP)\\W+(Next-Cpn﻿)/"
+  :label:
+  :freq: 20
+  :key: V0_H_type010
+- :template: V0
+  :line_category: HEADER
+  :line_type: type023
+  :regex: !ruby/regexp '/(RESETS ANNUALLY)/'
+  :label:
+  :freq: 19
+  :key: V0_H_type023
+- :template: V0
+  :line_category: HEADER
+  :line_type: type022
+  :regex: !ruby/regexp "/(PERIODIC CAP & FLOOR﻿)/"
+  :label:
+  :freq: 19
+  :key: V0_H_type022
+- :template: V0
+  :line_category: HEADER
+  :line_type: type031
+  :regex: !ruby/regexp '/(PASS-THRU)/'
+  :label:
+  :freq: 15
+  :key: V0_H_type031
+- :template: V0
+  :line_category: DATA
+  :line_type: type009
+  :regex: !ruby/regexp '/^\W+(\w{2,5})\W+(\w{2,5})\W+(\w{9})\W+(\d{2}\/\d{2}\/\d{2})\W+(\d{10})\W+(\d{2}\/\d{2}\/\d{2}).+(C\/M)/'
+  :label:
+  :freq: 15
+  :key: V0_D_type009
+- :template: V0
+  :line_category: HEADER
+  :line_type: type005
+  :regex: !ruby/regexp '/^\W+(Current Values\uFEFF)\W+(\w{3}\/\d{2})\W+(Year-to-Date)/'
+  :label:
+  :freq: 14
+  :key: V0_H_type005
+- :template: V0
+  :line_category: DATA
+  :line_type: type021
+  :regex: !ruby/regexp '/^\W?(\w{3}\/\d{2})\W+(\w)\W+(\w{9})\W+(.{10,23})\W+(\d{1,2}\.\d{1,3})\W+(\d{2}\/\d{2}\/\d{2}).+$/'
+  :label:
+  :freq: 8
+  :key: V0_D_type021
+- :template: V0
+  :line_category: DATA
+  :line_type: type010
+  :regex: !ruby/regexp '/^\W+(\w{2,5})\W+(\w{2,5})\W+(\w{9})\W+(\d{2}\/\d{2}\/\d{2})\W+(\d{10})\W+(\d{2}\/\d{2}\/\d{2}).+(S\/A)/'
+  :label:
+  :freq: 8
+  :key: V0_D_type010
+- :template: V0
+  :line_category: HEADER
+  :line_type: type034
+  :regex: !ruby/regexp '/^\W+(Category)\W+(\S{2,5}.+Qualified).+(TEFRA).+$/'
+  :label:
+  :freq: 7
+  :key: V0_H_type034
+- :template: V0
+  :line_category: HEADER
+  :line_type: type006
+  :regex: !ruby/regexp '/^\W+(CUSIP)\W+(Trans)(.*)(P & I Paid)/'
+  :label:
+  :freq: 7
+  :key: V0_H_type006
+- :template: V0
+  :line_category: HEADER
+  :line_type: type021
+  :regex: !ruby/regexp "/(FIXED RATE MBS﻿)/"
+  :label:
+  :freq: 6
+  :key: V0_H_type021
+- :template: V0
+  :line_category: HEADER
+  :line_type: type033
+  :regex: !ruby/regexp '/(MAKE WHOLE)/'
+  :label:
+  :freq: 4
+  :key: V0_H_type033
+- :template: V0
+  :line_category: HEADER
+  :line_type: type039
+  :regex: !ruby/regexp '/Starting\W+(Ending)\W+(Grp Type).+(Pre-Tax).+$/'
+  :label:
+  :freq: 3
+  :key: V0_H_type039
+- :template: V0
+  :line_category: HEADER
+  :line_type: type038
+  :regex: !ruby/regexp '/(Maturity Groups)\W+(Sec-)\W+(Sec-).+$/'
+  :label:
+  :freq: 3
+  :key: V0_H_type038
+- :template: V0
+  :line_category: HEADER
+  :line_type: type008
+  :regex: !ruby/regexp '/^\W+(Security\W+Security)\W+(Current Values\uFEFF)\W+(\w{3}\/\d{2})\W+(Year-to-Date)/'
+  :label:
+  :freq: 2
+  :key: V0_H_type008
+- :template: V0
+  :line_category: HEADER
+  :line_type: type032
+  :regex: !ruby/regexp "/(:).+(Par Bonds﻿)/"
+  :label:
+  :freq: 1
+  :key: V0_H_type032
+- :template: V0
+  :line_category: HEADER
+  :line_type: type001
+  :regex: !ruby/regexp '/^Date:\s*(.*)/'
+  :label:
+  :freq: 1
+  :key: V0_H_type001
+- :template: V0
+  :line_category: HEADER
+  :line_type: type037
+  :regex: !ruby/regexp "/(Security Security﻿)/"
+  :label:
+  :freq: 0
+  :key: V0_H_type037
+- :template: V0
+  :line_category: HEADER
+  :line_type: type036
+  :regex: !ruby/regexp '/^\W?(Portfolio\:)\W+(\d{1,}).+$/'
+  :label:
+  :freq: 0
+  :key: V0_H_type036
+- :template: V0
+  :line_category: HEADER
+  :line_type: type035
+  :regex: !ruby/regexp '/(State).+(\(\w{2}\)).?$/'
+  :label:
+  :freq: 0
+  :key: V0_H_type035
+- :template: V0
+  :line_category: HEADER
+  :line_type: type030
+  :regex: !ruby/regexp '/(NO CAP \/ NO FLOOR\uFEFF)/'
+  :label:
+  :freq: 0
+  :key: V0_H_type030
+- :template: V0
+  :line_category: HEADER
+  :line_type: type024
+  :regex: !ruby/regexp '/^\W+(G\w{3,4}.+Pool)/'
+  :label:
+  :freq: 0
+  :key: V0_H_type024
+- :template: V0
+  :line_category: HEADER
+  :line_type: type020
+  :regex: !ruby/regexp "/(NON BANK QUALIFIED﻿)/"
+  :label:
+  :freq: 0
+  :key: V0_H_type020
+- :template: V0
+  :line_category: HEADER
+  :line_type: type018
+  :regex: !ruby/regexp '/^\W+(F\w{3,4}.+Pool)/'
+  :label:
+  :freq: 0
+  :key: V0_H_type018
+- :template: V0
+  :line_category: HEADER
+  :line_type: type009
+  :regex: !ruby/regexp "/^\\W+(Group)\\W+(Type)(.*)(P & I Paid﻿)/"
+  :label:
+  :freq: 0
+  :key: V0_H_type009
+- :template: V0
+  :line_category: HEADER
+  :line_type: type002
+  :regex: !ruby/regexp '/^.*Time:\s*(\d{1,2}:\d{1,2})(.*)/'
+  :label:
+  :freq: 0
+  :key: V0_H_type002
+- :template: V0
+  :line_category: DATA
+  :line_type: type027
+  :regex: !ruby/regexp '/(^|\W?)(\-?\d{,3}?,?\d{,3}?,?\d{,3}\.\d{2})\W+(\-?\d{,3}?,?\d{,3}?,?\d{,3}\.\d{2})\W+(\-?\d{,3}?,?\d{,3}?,?\d{,3}\.\d{2})\W+(\-?\d{,3}?,?\d{,3}?,?\d{,3}\.\d{2})\W+(\-?\d{,3}?,?\d{,3}?,?\d{,3}\.\d{2})\W+(\-?\d{,3}?,?\d{,3}?,?\d{,3}\.\d{2})\W+(\-?\d{,3}?,?\d{,3}?,?\d{,3}\.\d{2}).?$/'
+  :label:
+  :freq: 0
+  :key: V0_D_type027
+- :template: V0
+  :line_category: DATA
+  :line_type: type026
+  :regex: !ruby/regexp '/^\W+(\w{9})\W+(\d{1,}\.\d{5})\W+(\d{2}\/\d{2}\/\d{4})\W+(\d{2}\/\d{2}\/\d{2})\W+(\d{2}\/\d{2}\/\d{2}).+$/'
+  :label:
+  :freq: 0
+  :key: V0_D_type026
+- :template: V0
+  :line_category: DATA
+  :line_type: type025
+  :regex: !ruby/regexp '/^\W?(\d{10})\W+(\w{4}.SERIES).{,20}\W+(\d{2}\/\d{2}\/\d{2})\W+(BUY|SELL).+$/'
+  :label:
+  :freq: 0
+  :key: V0_D_type025
+- :template: V0
+  :line_category: DATA
+  :line_type: type024
+  :regex: !ruby/regexp '/^\W?(\w{9})\W+(\d+\.\d{,5})\W+(\d{2}\/\d{2}\/\d{4})\W+(\d{2}\/\d{2}\/\d{2})/'
+  :label:
+  :freq: 0
+  :key: V0_D_type024
+- :template: V0
+  :line_category: DATA
+  :line_type: type023
+  :regex: !ruby/regexp '/^\W?(MUNI)\W+(GO|GO2|ZGO|REV|CPAR)\W+(.{,26})\W+(\d)\W+(\d{10}\/AFS).+$/'
+  :label:
+  :freq: 0
+  :key: V0_D_type023
+- :template: V0
+  :line_category: DATA
+  :line_type: type022
+  :regex: !ruby/regexp '/^\W?(\w{9})\W+(.+)\W+(\w{2,4})\W+(\d{2}\/\d{2}\/\d{4}).+(\d{10}).+$/'
+  :label:
+  :freq: 0
+  :key: V0_D_type022
+- :template: V0
+  :line_category: DATA
+  :line_type: type020
+  :regex: !ruby/regexp '/^\W{,5}(\w{2,5})\W+(\w{2,5})\W+(\d{1,2})\W+(\-?\d{,3}?,?\d{,3}?,?\d{,3}\.\d{2})\W+(0.0000).+$/'
+  :label:
+  :freq: 0
+  :key: V0_D_type020
+- :template: V0
+  :line_category: DATA
+  :line_type: type019
+  :regex: !ruby/regexp '/^\W?(\d{10})\W+(BUY)\W+(\w{7,9}).+(CASH)\W+(\d{2}\/\d{2}\/\d{2}).+$/'
+  :label:
+  :freq: 0
+  :key: V0_D_type019
+- :template: V0
+  :line_category: DATA
+  :line_type: type018
+  :regex: !ruby/regexp '/^\W?(.+)\W+(\d{2}\/\d{2}\/\d{2})\W+(D)\W+(\d{2,3}\.\d{3,7}).+$/'
+  :label:
+  :freq: 0
+  :key: V0_D_type018
+- :template: V0
+  :line_category: DATA
+  :line_type: type017
+  :regex: !ruby/regexp '/^\W?(T-Posted|Z-Disposed)\W+(\d{1,2}\.\d{3,5}).+(\d{2}\/\d{2}\/\d{4}).+(\d{2}\/\d{2}\/\d{2}).+$/'
+  :label:
+  :freq: 0
+  :key: V0_D_type017
+- :template: V0
+  :line_category: DATA
+  :line_type: type016
+  :regex: !ruby/regexp '/^\W+(\-?\d{,3}?,?\d{,3}?,?\d{,3}\.\d{2})\W+(\-?\d{,3}?,?\d{,3}?,?\d{,3}\.\d{2})\W+(\-?\d{,3}?,?\d{,3}?,?\d{,3}\.\d{2})\W+(\-?\d{,3}?,?\d{,3}?,?\d{,3}\.\d{2})\W+(\-?\d{,3}?,?\d{,3}?,?\d{,3}\.\d{2})\W+(\-?\d{,3}?,?\d{,3}?,?\d{,3}\.\d{2})\W+(\-?\d{,3}?,?\d{,3}?,?\d{,3}\.\d{2}).?$/'
+  :label:
+  :freq: 0
+  :key: V0_D_type016
+- :template: V0
+  :line_category: DATA
+  :line_type: type011
+  :regex: !ruby/regexp '/^(\W{3,})(\-?\d{1,}.\d{2})\W+(\-?\d{1,}.\d{2})\W+(\-?\d{1,}.\d{2})\W+(\-?\d{1,}.\d{2})\W+(\-?\d{1,}.\d{2})\W+(\-?\d{1,}.\d{2})\W+(\-?\d{1,}.\d{2})\W+(\-?\d{1,}.\d{2})\W+(\-?\d{1,}.\d{2})/'
+  :label:
+  :freq: 0
+  :key: V0_D_type011
+- :template: V0
+  :line_category: DATA
+  :line_type: type006
+  :regex: !ruby/regexp '/^\W+(\w{2,5})(\W{3,})(\w{2,5})\W+(\w{9})\W+(\d{2}\/\d{2}\/\d{2})\W+(\d{10})/'
+  :label:
+  :freq: 0
+  :key: V0_D_type006

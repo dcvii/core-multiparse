@@ -1,0 +1,32 @@
+---
+:label: P2
+:rule_count: 4
+:rules:
+- :template: P2
+  :line_category: DATA
+  :line_type: type001
+  :regex: !ruby/regexp '/^\s*(\-?\d{1,}.\d{2})\s*(\-?\d{1,}.\d{2})\s*(\-?\d{1,}.\d{2})\s*(\-?\d{1,}.\d{2})/'
+  :label:
+  :freq: 49
+  :key: P2_D_type001
+- :template: P2
+  :line_category: DATA
+  :line_type: type002
+  :regex: !ruby/regexp '/^\W?(1)\W+(\d{2}\/\d{2}\/\d{2})\W+(\w{2,4})/'
+  :label:
+  :freq: 49
+  :key: P2_D_type002
+- :template: P2
+  :line_category: HEADER
+  :line_type: type002
+  :regex: !ruby/regexp '/------.*(\(\w{2,6}\)).*-----/'
+  :label:
+  :freq: 7
+  :key: P2_H_type002
+- :template: P2
+  :line_category: HEADER
+  :line_type: type001
+  :regex: !ruby/regexp '/^\W?(Account)\t(.*)$/'
+  :label:
+  :freq: 0
+  :key: P2_H_type001

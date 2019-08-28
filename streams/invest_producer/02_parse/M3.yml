@@ -1,0 +1,25 @@
+---
+:label: M3
+:rule_count: 3
+:rules:
+- :template: M3
+  :line_category: DATA
+  :line_type: type004
+  :regex: !ruby/regexp '/^\W?(\w{3}\/\d{2})(.*)(\w{9})(.*)(\d{2}\/\d{2}\/\d{2})/'
+  :label:
+  :freq: 9
+  :key: M3_D_type004
+- :template: M3
+  :line_category: HEADER
+  :line_type: type003
+  :regex: !ruby/regexp '/(-->>>)\W+(.*)\W+(<<<--)/'
+  :label:
+  :freq: 1
+  :key: M3_H_type003
+- :template: M3
+  :line_category: HEADER
+  :line_type: type002
+  :regex: !ruby/regexp '/^\W+(Security Group)\W+(.*)\W(\(\w{2,5}\))\W+(Security Type)\W+(.*)\W(\(\w{2,5}\))/'
+  :label:
+  :freq: 0
+  :key: M3_H_type002

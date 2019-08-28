@@ -1,0 +1,76 @@
+H0  DATA  type00  ^(.\S{9})\s*(\d{1,}.\d{4,8})\s*(\d{2}\/\d{2}\/\d{4})\s*(\d{2}\/\d{2}\/\d{2,4})\s*(\d{2}\/\d{2}\/\d{2,4})\s*(\-?\d{1,}.\d{2})
+H0  DATA  type01  ^(\d{10})\s(FNMA.*)\s(\d{2}\/\d{2}\/\d{2})\s*(SELL|BUY)\s*(\-?\d{1,}.\d{2})\s*(\-?\d{1,}.\d{2})\s*(\-?\d{1,}.\d{2})\s*(\-?\d{1,}.\d{2})
+H0  DATA  type02  ^(\d{10})\s(SBA.*)\s(\d{2}\/\d{2}\/\d{2})\s*(SELL|BUY)\s*(\-?\d{1,}.\d{2})\s*(\-?\d{1,}.\d{2})\s*(\-?\d{1,}.\d{2})\s*(\-?\d{1,}.\d{2})
+H0  DATA  type03  ^(\d{10})\s(FHLMC.*)\s(\d{2}\/\d{2}\/\d{2})\s*(SELL|BUY)\s*(\-?\d{1,}.\d{2})\s*(\-?\d{1,}.\d{2})\s*(\-?\d{1,}.\d{2})\s*(\-?\d{1,}.\d{2})
+H0  DATA  type04  ^(\d{10})\s(GNMA.*)\s(\d{2}\/\d{2}\/\d{2})\s*(SELL|BUY)\s*(\-?\d{1,}.\d{2})\s*(\-?\d{1,}.\d{2})\s*(\-?\d{1,}.\d{2})\s*(\-?\d{1,}.\d{2})
+H0  DATA  type05  ^(Total Security)\s*(Group|Type)\s*(\(\S{1,5}\)):\s*(\-?\d{1,}.\d{2})\s*(\-?\d{1,}.\d{2})
+H0  DATA  type06  ^\s*(\-?\d{1,}.\d{2})\s*(\-?\d{1,}.\d{2})\s*(\-?\d{1,}.\d{2})\s*(\-?\d{1,}.\d{2})
+R0  DATA  type01  ^(\d[a-g]?\S{0,}.)\s*(\w{1,4})\s*(\S{9})\s*(.*)\s*(\-?\d{1,}.\d{2})
+V0  BLANK  type01  (^\W+$)
+V0  DATA  type01  ^\W+(\w{9})\W+(\d{10})\W+(\-?\d{1,}.\d{2})\W+(\-?\d{1,}.\d{2})\W+(\-?\d{1,}.\d{2})\W+(\-?\d{1,}.\d{2})\W+(\-?\d{1,}.\d{2})\W+(\-?\d{1,}.\d{2})\W+(\-?\d{1,}.\d{2})\W+(\-?\d{1,}.\d{2})
+V0  DATA  type02  ^\W+(Sec-Type)\W+(\w{2,5})\W+(\-?\d{1,}.\d{2})\W+(\-?\d{1,}.\d{2})\W+(\-?\d{1,}.\d{2})\W+(\-?\d{1,}.\d{2})\W+(\-?\d{1,}.\d{2})\W+(\-?\d{1,}.\d{2})\W+(\-?\d{1,}.\d{2})\W+(\-?\d{1,}.\d{2})
+V0  DATA  type03  ^\W+(Sec-Group)\W+(\w{2,5})\W+(\-?\d{1,}.\d{2})\W+(\-?\d{1,}.\d{2})\W+(\-?\d{1,}.\d{2})\W+(\-?\d{1,}.\d{2})\W+(\-?\d{1,}.\d{2})\W+(\-?\d{1,}.\d{2})\W+(\-?\d{1,}.\d{2})\W+(\-?\d{1,}.\d{2})
+V0  DATA  type04  ^\W+(\w{2,5})(\W{3,})(\w{2,5})\W+(\-?\d{1,}.\d{2})\W+(\-?\d{1,}.\d{2})\W+(\-?\d{1,}.\d{2})\W+(\-?\d{1,}.\d{2})\W+(\-?\d{1,}.\d{2})\W+(\-?\d{1,}.\d{2})\W+(\-?\d{1,}.\d{2})\W+(\-?\d{1,}.\d{2})
+V0  DATA  type05  ^(\W{3,})(\w{2,5})\W+(\-?\d{1,}.\d{2})\W+(\-?\d{1,}.\d{2})\W+(\-?\d{1,}.\d{2})\W+(\-?\d{1,}.\d{2})\W+(\-?\d{1,}.\d{2})\W+(\-?\d{1,}.\d{2})\W+(\-?\d{1,}.\d{2})\W+(\-?\d{1,}.\d{2})
+V0  DATA  type06  ^(\W{3,})(\-?\d{1,}.\d{2})\W+(\-?\d{1,}.\d{2})\W+(\-?\d{1,}.\d{2})\W+(\-?\d{1,}.\d{2})\W+(\-?\d{1,}.\d{2})\W+(\-?\d{1,}.\d{2})\W+(\-?\d{1,}.\d{2})\W+(\-?\d{1,}.\d{2})
+V0  DATA  type06  ^\W+(\w{2,5})(\W{3,})(\w{2,5})\W+(\w{9})\W+(\d{2}\/\d{2}\/\d{2})\W+(\d{10})
+V0  DATA  type07  ^\W+(\w{2,5})\W+(\w{2,5})\W+(\w{9})\W+(\d{2}\/\d{2}\/\d{2})\W+(\d{10})\W+(\d{2}\/\d{2}\/\d{2}).+(C\/C)
+V0  DATA  type08  ^\W+(G\w{2,5})\W+(\w{2,5})\W+(\w{9})\W+(\d{2}\/\d{2}\/\d{2})\W+(\d{10})\W+(\d{2}\/\d{2}\/\d{2}).+
+V0  DATA  type09  ^\W+(\w{2,5})\W+(\w{2,5})\W+(\w{9})\W+(\d{2}\/\d{2}\/\d{2})\W+(\d{10})\W+(\d{2}\/\d{2}\/\d{2}).+(C\/M)
+V0  DATA  type10  ^\W+(\w{2,5})\W+(\w{2,5})\W+(\w{9})\W+(\d{2}\/\d{2}\/\d{2})\W+(\d{10})\W+(\d{2}\/\d{2}\/\d{2}).+(S\/A)
+V0  DATA  type11  ^(\W{3,})(\-?\d{1,}.\d{2})\W+(\-?\d{1,}.\d{2})\W+(\-?\d{1,}.\d{2})\W+(\-?\d{1,}.\d{2})\W+(\-?\d{1,}.\d{2})\W+(\-?\d{1,}.\d{2})\W+(\-?\d{1,}.\d{2})\W+(\-?\d{1,}.\d{2})\W+(\-?\d{1,}.\d{2})
+V0  DATA  type12  (?:^\W?)(\w{3,})\W+(\w{3,})\W+\W+(\-?\d{1,}.\d{2})
+V0  DATA  type13  ^\W+(\w{3,4})\W+(\-?\d{1,}.\d{2})
+V0  DATA  type14  ^\W+(?:\b)(F\w{1,4}|N\w{1,4}|G\w{1,4})
+V0  DATA  type15  ^\W?(\w{9}).+(\d{10}).+(\d{2}\/\d{2}\/\d{2}).+(\d{2}\/\d{2}\/\d{2}).+$
+V0  DATA  type16  ^\W+(\-?\d{,3}?,?\d{,3}?,?\d{,3}\.\d{2})\W+(\-?\d{,3}?,?\d{,3}?,?\d{,3}\.\d{2})\W+(\-?\d{,3}?,?\d{,3}?,?\d{,3}\.\d{2})\W+(\-?\d{,3}?,?\d{,3}?,?\d{,3}\.\d{2})\W+(\-?\d{,3}?,?\d{,3}?,?\d{,3}\.\d{2})\W+(\-?\d{,3}?,?\d{,3}?,?\d{,3}\.\d{2})\W+(\-?\d{,3}?,?\d{,3}?,?\d{,3}\.\d{2}).?$
+V0  DATA  type17  ^\W?(T-Posted|Z-Disposed)\W+(\d{1,2}\.\d{3,5}).+(\d{2}\/\d{2}\/\d{4}).+(\d{2}\/\d{2}\/\d{2}).+$
+V0  DATA  type18  ^\W?(.+)\W+(\d{2}\/\d{2}\/\d{2})\W+(D)\W+(\d{2,3}\.\d{3,7}).+$
+V0  DATA  type19  ^\W?(\d{10})\W+(BUY)\W+(\w{7,9}).+(CASH)\W+(\d{2}\/\d{2}\/\d{2}).+$
+V0  DATA  type20  ^\W{,5}(\w{2,5})\W+(\w{2,5})\W+(\d{1,2})\W+(\-?\d{,3}?,?\d{,3}?,?\d{,3}\.\d{2})\W+(0.0000).+$
+V0  DATA  type21  ^\W?(\w{3}\/\d{2})\W+(\w)\W+(\w{9})\W+(.{10,23})\W+(\d{1,2}\.\d{1,3})\W+(\d{2}\/\d{2}\/\d{2}).+$
+V0  DATA  type22  ^\W?(\w{9})\W+(.+)\W+(\w{2,4})\W+(\d{2}\/\d{2}\/\d{4}).+(\d{10}).+$
+V0  DATA  type23  ^\W?(MUNI)\W+(GO|GO2|ZGO|REV|CPAR)\W+(.{,26})\W+(\d)\W+(\d{10}\/AFS).+$
+V0  DATA  type24  ^\W?(\w{9})\W+(\d+\.\d{,5})\W+(\d{2}\/\d{2}\/\d{4})\W+(\d{2}\/\d{2}\/\d{2})
+V0  DATA  type25  ^\W?(\d{10})\W+(\w{4}.SERIES).{,20}\W+(\d{2}\/\d{2}\/\d{2})\W+(BUY|SELL).+$
+V0  DATA  type26  ^\W+(\w{9})\W+(\d{1,}\.\d{5})\W+(\d{2}\/\d{2}\/\d{4})\W+(\d{2}\/\d{2}\/\d{2})\W+(\d{2}\/\d{2}\/\d{2}).+$
+V0  DATA  type27  (^|\W?)(\-?\d{,3}?,?\d{,3}?,?\d{,3}\.\d{2})\W+(\-?\d{,3}?,?\d{,3}?,?\d{,3}\.\d{2})\W+(\-?\d{,3}?,?\d{,3}?,?\d{,3}\.\d{2})\W+(\-?\d{,3}?,?\d{,3}?,?\d{,3}\.\d{2})\W+(\-?\d{,3}?,?\d{,3}?,?\d{,3}\.\d{2})\W+(\-?\d{,3}?,?\d{,3}?,?\d{,3}\.\d{2})\W+(\-?\d{,3}?,?\d{,3}?,?\d{,3}\.\d{2}).?$
+V0  HEADER  type01  ^Date:\s*(.*)
+V0  HEADER  type02  ^.*Time:\s*(\d{1,2}:\d{1,2})(.*)
+V0  HEADER  type03  ^.*User(.*)Page
+V0  HEADER  type04  ^.*Institution: H26\s*\((Heritage Oaks)(.*)
+V0  HEADER  type05  ^\W+(Current Values﻿)\W+(\w{3}\/\d{2})\W+(Year-to-Date)
+V0  HEADER  type06  ^\W+(CUSIP)\W+(Trans)(.*)(P & I Paid)
+V0  HEADER  type07  ^\W+(Security Group)\W+(.*)\W(\(\w{2,5}\))\W+(Security Type)\W+(.*)\W(\(\w{2,5}\))
+V0  HEADER  type08  ^\W+(Security\W+Security)\W+(Current Values﻿)\W+(\w{3}\/\d{2})\W+(Year-to-Date)
+V0  HEADER  type09  ^\W+(Group)\W+(Type)(.*)(P & I Paid﻿)
+V0  HEADER  type10  ^\W+(SGroup)\W+(Type)\W+(CUSIP)\W+(Next-Cpn﻿)
+V0  HEADER  type11  ^\W+(Security Description﻿)\W+(﻿Trans#﻿)
+V0  HEADER  type12  ^\W+(BRHEA|\w{3,}\W+SERIES)
+V0  HEADER  type13  ^\W+(EXCH|FLT|SEQ|PAC|DLY|PT)(.*)(\/)
+V0  HEADER  type14  ^\W+(.+)(PAY)(.+)(\/)(.+)(DELAY)
+V0  HEADER  type15  ^\W+(\d{1,2}(\.)\d{3,5})\W+(\d{2}\/\d{2}\/\d{4})\W+(\d{2}\/\d{2}\/\d{2})
+V0  HEADER  type16  ^\W+(Totals: Security Type)\W+(\(\w{2,5}\))﻿ ﻿
+V0  HEADER  type17  ^\W+(Totals: Security Group)\W+(\(\w{2,5}\))﻿ ﻿
+V0  HEADER  type18  ^\W+(F\w{3,4}.+Pool)
+V0  HEADER  type19  ^\W+.+(LIBOR)
+V0  HEADER  type20  (NON BANK QUALIFIED﻿)
+V0  HEADER  type21  (FIXED RATE MBS﻿)
+V0  HEADER  type22  (PERIODIC CAP & FLOOR﻿)
+V0  HEADER  type23  (RESETS ANNUALLY)
+V0  HEADER  type24  ^\W+(G\w{3,4}.+Pool)
+V0  HEADER  type25  (CALL).+(BEG)
+V0  HEADER  type26  (Continuous Call).+(\d{2}\/\d{2}\/\d{4})
+V0  HEADER  type27  ^\W+(CMBS).+(:)
+V0  HEADER  type28  ^\W+(\w{2,5}).+(\d{4}-\w+).(\w{1,4})
+V0  HEADER  type29  ^\W+(S\w{2,4}.+Pool)
+V0  HEADER  type30  (NO CAP \/ NO FLOOR﻿)
+V0  HEADER  type31  (PASS-THRU)
+V0  HEADER  type32  (:).+(Par Bonds﻿)
+V0  HEADER  type33  (MAKE WHOLE)
+V0  HEADER  type34  ^\W+(Category)\W+(\S{2,5}.+Qualified).+(TEFRA).+$
+V0  HEADER  type35  (State).+(\(\w{2}\)).?$
+V0  HEADER  type36  ^\W?(Portfolio\:)\W+(\d{1,}).+$
+V0  HEADER  type37  (Security Security﻿)
+V0  HEADER type38  (Maturity Groups)\W+(Sec-)\W+(Sec-).+$
+V0  HEADER type39  Starting\W+(Ending)\W+(Grp Type).+(Pre-Tax).+$

@@ -1,0 +1,46 @@
+---
+:label: M1
+:rule_count: 6
+:rules:
+- :template: M1
+  :line_category: DATA
+  :line_type: type001
+  :regex: !ruby/regexp '/^\W?(J|F|M|A|S|O|N|D)(\w{2}\/\d{2})\W+(\-?\d{,3}?,?\d{,3}?,?\d{,3}\.\d{2})/'
+  :label:
+  :freq: 49
+  :key: M1_D_type001
+- :template: M1
+  :line_category: HEADER
+  :line_type: type005
+  :regex: !ruby/regexp '/^.*(Totals).*$/'
+  :label:
+  :freq: 2
+  :key: M1_H_type005
+- :template: M1
+  :line_category: HEADER
+  :line_type: type003
+  :regex: !ruby/regexp '/^.*(Par Value).*$/'
+  :label:
+  :freq: 2
+  :key: M1_H_type003
+- :template: M1
+  :line_category: HEADER
+  :line_type: type002
+  :regex: !ruby/regexp '/^.*(Maturities).*$/'
+  :label:
+  :freq: 1
+  :key: M1_H_type002
+- :template: M1
+  :line_category: DATA
+  :line_type: type002
+  :regex: !ruby/regexp '/^\W?(J|F|M|A|S|O|N|D)(\w{2}\/\d{2})\W+(\-?\d{,3}?,?\d{,3}?,?\d{,3}\.\d{2})(.*)(\/d{1,2}.\d{3})/'
+  :label:
+  :freq: 0
+  :key: M1_D_type002
+- :template: M1
+  :line_category: HEADER
+  :line_type: type004
+  :regex: !ruby/regexp '/^\W+(Security Group)\W+(.*)\W(\(\w{2,5}\))\W+(Security Type)\W+(.*)\W(\(\w{2,5}\))/'
+  :label:
+  :freq: 0
+  :key: M1_H_type004

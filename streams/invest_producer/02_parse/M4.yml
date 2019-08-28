@@ -1,0 +1,60 @@
+---
+:label: M4
+:rule_count: 8
+:rules:
+- :template: M4
+  :line_category: DATA
+  :line_type: type007
+  :regex: !ruby/regexp '/^\W+(\w{3,4})\W+(\w{3,4})\W+(\d{1,3})\W+(\-?\d{,3}?,?\d{,3}?,?\d{,3}\.\d{2})/'
+  :label:
+  :freq: 95
+  :key: M4_D_type007
+- :template: M4
+  :line_category: DATA
+  :line_type: type004
+  :regex: !ruby/regexp '/^\W+(\d{1,2})\W+(Months|Month|Years|Year)\W+(\d{1,2})\W+(Months|Month|Years|Year)/'
+  :label:
+  :freq: 7
+  :key: M4_D_type004
+- :template: M4
+  :line_category: HEADER
+  :line_type: type001
+  :regex: !ruby/regexp '/Version:\W+(\w{2,5})/'
+  :label:
+  :freq: 3
+  :key: M4_H_type001
+- :template: M4
+  :line_category: DATA
+  :line_type: type008
+  :regex: !ruby/regexp '/^\W+(\d{1,2})\W+(Years)\W+(.*)(Beyond)/'
+  :label:
+  :freq: 1
+  :key: M4_D_type008
+- :template: M4
+  :line_category: DATA
+  :line_type: type003
+  :regex: !ruby/regexp '/^\W+(\d{2,4})\W+(\w{3,4})\W+(\d{1,3})/'
+  :label:
+  :freq: 1
+  :key: M4_D_type003
+- :template: M4
+  :line_category: DATA
+  :line_type: type002
+  :regex: !ruby/regexp '/^\W+(1 Month)\W+(\w{1,4})\W+(\w{1,4})\W+(\d{1,3})/'
+  :label:
+  :freq: 1
+  :key: M4_D_type002
+- :template: M4
+  :line_category: DATA
+  :line_type: type006
+  :regex: !ruby/regexp '/^\W?(\w{3}\/\d{2})(.*)(\w{9})(.*)(\d{2}\/\d{2}\/\d{2})/'
+  :label:
+  :freq: 0
+  :key: M4_D_type006
+- :template: M4
+  :line_category: DATA
+  :line_type: type005
+  :regex: !ruby/regexp '/^\W+(\d{1,2})\W+(Months|Month|Years|Year)\W+(.*)(!Beyond)/'
+  :label:
+  :freq: 0
+  :key: M4_D_type005

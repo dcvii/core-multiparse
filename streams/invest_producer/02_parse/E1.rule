@@ -1,0 +1,2 @@
+E1  DATA  type000  ^\W?(\w{,9})\W+(\d{,2}\.\d{,2})(\W?)
+E1  HEADER  type001  (CUSIP)

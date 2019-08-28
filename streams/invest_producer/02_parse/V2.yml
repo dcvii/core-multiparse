@@ -1,0 +1,25 @@
+---
+:label: V2
+:rule_count: 3
+:rules:
+- :template: V2
+  :line_category: DATA
+  :line_type: type001
+  :regex: !ruby/regexp '/^\W?(\w{9})\W+(\d{10})/'
+  :label:
+  :freq: 206
+  :key: V2_D_type001
+- :template: V2
+  :line_category: HEADER
+  :line_type: type002
+  :regex: !ruby/regexp '/^.*Time:\s*(\d{1,2}:\d{1,2})(.*)/'
+  :label:
+  :freq: 0
+  :key: V2_H_type002
+- :template: V2
+  :line_category: HEADER
+  :line_type: type001
+  :regex: !ruby/regexp '/^Date:\s*(.*)/'
+  :label:
+  :freq: 0
+  :key: V2_H_type001

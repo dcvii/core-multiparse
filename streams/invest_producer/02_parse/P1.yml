@@ -1,0 +1,18 @@
+---
+:label: P1
+:rule_count: 2
+:rules:
+- :template: P1
+  :line_category: DATA
+  :line_type: type000
+  :regex: !ruby/regexp '/^\W?^\W?((\d{,3}\/\d{,3})|(30\/360))/'
+  :label:
+  :freq: 195
+  :key: P1_D_type000
+- :template: P1
+  :line_category: HEADER
+  :line_type: type001
+  :regex: !ruby/regexp '/^\W?ACCRU_BASIS/'
+  :label:
+  :freq: 1
+  :key: P1_H_type001

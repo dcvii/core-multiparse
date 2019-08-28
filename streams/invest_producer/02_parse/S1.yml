@@ -1,0 +1,32 @@
+---
+:label: S1
+:rule_count: 4
+:rules:
+- :template: S1
+  :line_category: HEADER
+  :line_type: type001
+  :regex: !ruby/regexp '/Group:.*(\(\w{2,4}\)).*Type:.*(\(\w{2,4}\))/'
+  :label:
+  :freq: 0
+  :key: S1_H_type001
+- :template: S1
+  :line_category: DATA
+  :line_type: type000
+  :regex: !ruby/regexp '/^(\w{,9})\W+(\d{,2}\.\d{,2})\W?$/'
+  :label:
+  :freq: 0
+  :key: S1_D_type000
+- :template: S1
+  :line_category: DATA
+  :line_type: type002
+  :regex: !ruby/regexp '/^\W?(\w{9})\W+(\d{1,2}\.\d{2,})\W+(\d{2}\/\d{2}\/\d{4})/'
+  :label:
+  :freq: 0
+  :key: S1_D_type002
+- :template: S1
+  :line_category: DATA
+  :line_type: type001
+  :regex: !ruby/regexp '/^\W?(\d{10})\W+(.*)\W+(\d{2}\/\d{2}\/\d{2})\W+(SELL)/'
+  :label:
+  :freq: 0
+  :key: S1_D_type001
